@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIOHAZARD 6 武器データベース</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>BIOHAZARD 6 武器データベース</h1>
+    <p>武器をタップして見た目と詳細ステータスを確認</p>
+  </header>
+
+  <nav class="filter-bar">
+    <button class="filter-btn active" data-campaign="all">すべて</button>
+    <button class="filter-btn" data-campaign="レオン">レオン編</button>
+    <button class="filter-btn" data-campaign="クリス">クリス編</button>
+    <button class="filter-btn" data-campaign="ジェイク">ジェイク編</button>
+    <button class="filter-btn" data-campaign="エイダ">エイダ編</button>
+  </nav>
+
+  <main id="weapon-list" class="weapon-grid"></main>
+
+  <!-- ワンタップ画像表示モーダル -->
+  <div id="image-modal" class="modal hidden" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <button class="close-btn" onclick="closeModal()">×</button>
+      <h2 id="modal-title"></h2>
+      <div class="image-wrapper">
+        <img id="modal-img" src="" alt="武器の見た目">
+      </div>
+      <p id="modal-appearance" class="appearance-desc"></p>
+      <div id="modal-specs" class="modal-specs"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
